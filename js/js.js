@@ -7,7 +7,7 @@ var timerFuel=null;
 //NAVE
 var y = 10; // altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
 var v = 0;
-var c = 100;
+var gasolina = 100;
 var a = g; //la aceleración cambia cuando se enciende el motor de a=g a a=-g (simplificado)
 //MARCADORES
 var velocidad = null;
@@ -18,7 +18,11 @@ var combustible = null;
 window.onload = function(){
 	
 	velocidad = document.getElementById("velocidad");
+
+
+
 	altura = document.getElementById("altura");
+
 	combustible = document.getElementById("fuel");
 
 	
@@ -30,7 +34,7 @@ window.onload = function(){
 	}
 	//ocultar menú móvil
 	document.getElementById("hidem").onclick = function () {
-		document.getElementsByClassName("c")[0].style.display = "none";
+		document.getElementsByClassName("gasolina")[0].style.display = "none";
 		start();
 	}
 	//encender/apagar el motor al hacer click en la pantalla
@@ -78,17 +82,23 @@ function motorOn(){
 	//el motor da aceleración a la nave
 	a=-g;
 	//mientras el motor esté activado gasta combustible
-	if (timerFuel==null)
+	if (timerFuel==null){
 	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
+		}
+	if (gasolina<=0) {
+		motorOff();
+	}
+
 }
 function motorOff(){
 	a=g;
+	document.getElementById("Motor").style.display="none";
 	clearInterval(timerFuel);
 	timerFuel=null;
 }
 function actualizarFuel(){
 	//Restamos combustible hasta que se agota
-	c-=0.1;
-	if (c < 0 ) c = 0;
-	combustible.innerHTML=c;	
+	gasolina-=0.1;
+	if (gasolina < 0 ) gasolina = 0;
+	combustible.innerHTML=gasolina;	
 }

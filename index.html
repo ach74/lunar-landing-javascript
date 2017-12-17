@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Lunar Lander</title>
- <meta name="description" content="">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
- <link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
- <script src="js/js.js"></script>
+<title>Lunar Lander</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' media='screen and (min-width: 961px)' href='css/escritorio.css'>
+	<link rel='stylesheet' media='screen and (max-width: 960px)' href='css/movil.css'>
+	<script src="js/js.js"></script>
 </head>
-<body>
- <div id="nave">
- <img src="img/nave.png" alt="img nave">
- </div>
- <div class="a">
- <div id="showm">show menu</div>
- <ul id="cpanel">
-  <li>Velocidad <span id="velocidad">100</span> m/s</li>
-  <li>Fuel <span id="fuel">100</span> l</li>
-  <li>Altura <span id="altura">70</span> m</li>
- </ul>
- </div><div class="b">b</div><div class="c">
- <div id="hidem">hide menu</div>
- <ul id="menu">
-  <li>Jugar</li>
-  <li>Instrucciones</li>
-  <li>Acerca de...</li>
- </ul>
- </div>
- <div class="d">d</div>
-</body>
+	<body >
+
+		 <div id="nave">
+		 	<img id ="Nave" src="img/Naves/Nave.png" alt="img-nave">
+			<img id ="Motor" src="img/Naves/Nave2.gif" alt="img-motor">
+		 </div>
+
+		 <div class="izq">
+		 	<div id="showm">show menu</div>
+			 <div id="cpanel">
+				<div class="controles">Velocidad 
+					<br><span id="velocidad">100</span> m/s</div>
+				<div class="controles">Fuel 
+					<br><span id="fuel">100</span> litros</div>
+				<div class="controles">Altura 
+					<br><span id="altura">70</span> m</div>
+			 </div>
+		 </div>
+
+	 	<div class="centro">b</div>
+
+	 	<div class="der">
+	 		<div id="hidem">hide menu</div>
+				<div id="menu">
+					<dir id="BotonIntruccion">Intrucciones</dir>
+					<div id="BotonPlay">Play</div>
+					<div id="BotonPause">Pausar</div>
+					<div id="BotonReiniciar">Replay</div>
+					<div id="BotonSonido">Sonido</div>
+				</div>
+		</div>
+
+	 	<div class="MoonZone">
+	 		<img src="img/Luna/Luna.png" alt="luna" id="luna">
+	 		<img src="img/Plataforma/Base.png" alt="Base lunar" id="BaseLunar">
+	 	</div>
+
+	</body>
 </html>

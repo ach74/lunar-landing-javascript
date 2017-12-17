@@ -1,0 +1,165 @@
+body,html{
+	padding:0px;
+	margin:0px;
+}
+body {
+	background-image: url("../img/Fondo/Fondo.png");
+}
+.izq{
+	background-color:none;
+}
+
+.centro{
+	background-color:none;
+}
+
+.der{
+	background-color:none;
+	display:block !important;
+}
+
+.izq,.centro,.der{
+	display:inline-block;
+	width:33.33%;
+	height:100%;
+	float:left;
+}
+
+.MoonZone{
+	height:40%;
+	width:60%;
+	position:fixed;
+	bottom:0px;
+	left:20%;
+	z-index: 0;
+}
+
+#luna{
+	height: 100%; 
+	width: 100%;
+}
+
+#BaseLunar{
+	z-index: 1;
+	position: fixed;
+	left: 40%;
+	bottom: 100px;
+	height: 15%;
+	width: 15%;
+}
+
+#nave{
+	z-index: 5;
+	right: 2%;
+	position:fixed;
+	top:5%;
+	width:100%;
+	height:15%;
+}
+
+#Nave{
+	height:100%;
+	display: block;
+	margin: auto;
+}
+
+#Motor{
+	height: 100%;
+	display: none;
+	margin: auto;
+}
+
+.controles{
+	width: auto; height: auto; 
+	max-width: 200px;
+	background-color: rgb(255, 204, 204, 0.7);
+	margin: 10px;
+	width: 100%;
+	border-style: outset;
+	font-size: 150%;
+	padding: 5px;
+	margin-bottom: 15px;
+}
+
+
+
+#cpanel{}
+
+#hidem,#showm{
+	display:none
+}
+
+#BotonPlay{
+	display: inline-block;
+	float: right;
+	margin: 5px;
+	margin-top: 5%;
+	text-align: center;
+	font-size: 0%;
+	width: 70px;
+	height: 70px;
+	background-image: url("../img/Opcion/Play.png");
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: 50% 50%;
+}
+
+#BotonPause{
+	display: none;
+	float: right;
+	margin: 5px;
+	margin-top: 5%;
+	text-align: center;
+	font-size: 0%;
+	width: 70px;
+	height: 70px;
+	background-image: url("../img/Opcion/Pause.png");
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: 50% 50%;
+}
+
+#BotonReiniciar{
+	display: inline-block;
+	float: right;
+	margin: 5px;
+	margin-top: 5%;
+	text-align: center;
+	font-size: 0%;
+	width: 70px;
+	height: 70px;
+	background-image: url("../img/Opcion/Replay.png");
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: 50% 50%;
+}
+
+#BotonIntruccion{
+	display: inline-block;
+	float: right;
+	margin: 5px;
+	margin-top: 5%;
+	text-align: center;
+	font-size: 0%;
+	width: 70px;
+	height: 70px;
+	background-image: url("../img/Opcion/Menu.png");
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: 50% 50%;
+}
+
+#BotonSonido{
+	display: inline-block;
+	float: right;
+	margin: 5px;
+	margin-top: 5%;
+	text-align: center;
+	font-size: 0%;
+	width: 70px;
+	height: 70px;
+	background-image: url("../img/Opcion/Sonido.png");
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: 50% 50%;
+}

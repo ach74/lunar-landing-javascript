@@ -19,8 +19,6 @@ window.onload = function(){
 	
 	velocidad = document.getElementById("velocidad");
 
-
-
 	altura = document.getElementById("altura");
 
 	combustible = document.getElementById("fuel");
@@ -64,14 +62,19 @@ function stop(){
 }
 
 function moverNave(){
+
 	//cambiar velocidad y posicion
+
 	v +=a*dt;
 	y +=v*dt;
+
 	//actualizar marcadores
-	velocidad.innerHTML=v;
-	altura.innerHTML=y;
-	
+
+	velocidad.innerHTML=v.toFixed(2);
+	altura.innerHTML=y.toFixed(2);
+
 	//mover hasta que top sea un 70% de la pantalla
+
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
@@ -83,6 +86,7 @@ function motorOn(){
 	a=-g;
 	//mientras el motor esté activado gasta combustible
 	if (timerFuel==null){
+
 	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
 		}
 	if (gasolina<=0) {
@@ -100,5 +104,5 @@ function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	gasolina-=0.1;
 	if (gasolina < 0 ) gasolina = 0;
-	combustible.innerHTML=gasolina;	
+	combustible.innerHTML=gasolina.toFixed(2);	
 }

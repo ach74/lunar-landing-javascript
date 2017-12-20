@@ -3,7 +3,7 @@ body,html{
 	margin:0px;
 }
 body {
-	background-image: url("../img/Fondo/Fondo.png");
+	background-image: url("../img/Fondo.png");
 }
 .izq{
 	background-color:none;
@@ -43,7 +43,7 @@ body {
 	z-index: 1;
 	position: fixed;
 	left: 40%;
-	bottom: 100px;
+	bottom: 60px;
 	height: 15%;
 	width: 15%;
 }
@@ -63,7 +63,7 @@ body {
 	margin: auto;
 }
 
-#Motor{
+#Motor-encencido{
 	height: 100%;
 	display: none;
 	margin: auto;
@@ -98,7 +98,7 @@ body {
 	font-size: 0%;
 	width: 70px;
 	height: 70px;
-	background-image: url("../img/Opcion/Play.png");
+	background-image: url("../img/Play.png");
 	background-repeat: no-repeat;
 	background-size: 80%;
 	background-position: 50% 50%;
@@ -113,7 +113,7 @@ body {
 	font-size: 0%;
 	width: 70px;
 	height: 70px;
-	background-image: url("../img/Opcion/Pause.png");
+	background-image: url("../img/Pause.png");
 	background-repeat: no-repeat;
 	background-size: 80%;
 	background-position: 50% 50%;
@@ -128,7 +128,7 @@ body {
 	font-size: 0%;
 	width: 70px;
 	height: 70px;
-	background-image: url("../img/Opcion/Replay.png");
+	background-image: url("../img/Replay.png");
 	background-repeat: no-repeat;
 	background-size: 90%;
 	background-position: 50% 50%;
@@ -143,7 +143,7 @@ body {
 	font-size: 0%;
 	width: 70px;
 	height: 70px;
-	background-image: url("../img/Opcion/Menu.png");
+	background-image: url("../img/Menu.png");
 	background-repeat: no-repeat;
 	background-size: 50%;
 	background-position: 50% 50%;
@@ -158,7 +158,7 @@ body {
 	font-size: 0%;
 	width: 70px;
 	height: 70px;
-	background-image: url("../img/Opcion/Sonido.png");
+	background-image: url("../img/Sonido.png");
 	background-repeat: no-repeat;
 	background-size: 90%;
 	background-position: 50% 50%;

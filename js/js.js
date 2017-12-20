@@ -13,7 +13,9 @@ var a = g; //la aceleración cambia cuando se enciende el motor de a=g a a=-g (s
 var velocidad = null;
 var altura = null;
 var combustible = null;
+var aterizar = false;
 
+var maxV = null;
 //al cargar por completo la página...
 window.onload = function(){
 	
@@ -75,34 +77,51 @@ function moverNave(){
 
 	//mover hasta que top sea un 70% de la pantalla
 
-	if (y<70){ 
+	if (y<73){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
 		stop();
+		aterizar = true; /*new*/
 	}
 }
 function motorOn(){
+	 document.getElementById("Nave").src = "img/Nave2.gif";
+	if (aterizar) {
+		motorOff();
+	}else{
+
+	
 	//el motor da aceleración a la nave
 	a=-g;
 	//mientras el motor esté activado gasta combustible
 	if (timerFuel==null){
+	
+
 
 	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
+
 		}
 	if (gasolina<=0) {
-		motorOff();
+	motorOff();
 	}
+
+
+
+}
 
 }
 function motorOff(){
+	document.getElementById("Nave").src = "img/Nave.png";
+
 	a=g;
 	document.getElementById("Motor").style.display="none";
 	clearInterval(timerFuel);
 	timerFuel=null;
+
 }
 function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	gasolina-=0.1;
 	if (gasolina < 0 ) gasolina = 0;
-	combustible.innerHTML=gasolina.toFixed(2);	
+	combustible.innerHTML=gasolina.toFixed(0);	
 }

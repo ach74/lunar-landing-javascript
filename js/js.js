@@ -15,7 +15,11 @@ var combustible = null;
 var singasofa = false;
 //al cargar por completo la página...
 var siempreV = null;
+<<<<<<< HEAD
 var siempreA = null;
+=======
+
+>>>>>>> dce3853efa1783322934b7eecaff3e8945146440
 window.onload = function(){
 	
 	velocidad = document.getElementById("velocidad");
@@ -25,7 +29,19 @@ window.onload = function(){
 	
 	//definición de eventos
 	//mostrar menú móvil
+<<<<<<< HEAD
 
+=======
+    	document.getElementById("showm").onclick = function () {
+		document.getElementsByClassName("c")[0].style.display = "block";
+		stop();
+	}
+	//ocultar menú móvil
+	document.getElementById("hidem").onclick = function () {
+		document.getElementsByClassName("c")[0].style.display = "none";
+		start();
+	}
+>>>>>>> dce3853efa1783322934b7eecaff3e8945146440
 	//encender/apagar el motor al hacer click en la pantalla
 	document.getElementById('BotonOn').onclick = function () {
  	  if (a==g){
@@ -64,6 +80,7 @@ function moverNave(){
 	}else{
 		siempreV = -v;
 	}
+<<<<<<< HEAD
 
 	if (y > 0) {
 		siempreA = y;
@@ -78,6 +95,14 @@ function moverNave(){
 	
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<73){ 
+=======
+
+	velocidad.innerHTML=siempreV.toFixed(2);
+	altura.innerHTML=y.toFixed(2);
+	
+	//mover hasta que top sea un 70% de la pantalla
+	if (y<70){ 
+>>>>>>> dce3853efa1783322934b7eecaff3e8945146440
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
 		stop();
@@ -109,7 +134,14 @@ function actualizarFuel(){
 	c = 0;
 	//combustible.innerHTML=c;	
 	singasofa = true;
+<<<<<<< HEAD
 	motorOff(); /**Que se apage el motor cuando el fuel sea 0**/
 }
 	combustible.style.height = c +"%";
+=======
+}
+
+	combustible.style.height = c +"%";
+
+>>>>>>> dce3853efa1783322934b7eecaff3e8945146440
 }

@@ -2,48 +2,109 @@
 <html>
 <head>
 <title>Lunar Lander</title>
-	<meta name="description" content="">
+	<meta charset="UTF-8">
+	<meta name="description" content="Juego con JavaScript, para la asignatura de lenguaje de marcas.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel='stylesheet' media='screen and (min-width: 961px)' href='css/escritorio.css'>
-	<link rel='stylesheet' media='screen and (max-width: 960px)' href='css/movil.css'>
+	<link rel='stylesheet' media='screen and (min-width: 751px)' href='css/escritorio.css'>
+	<link rel="stylesheet" media="screen and (max-width: 750px)" href="css/phablets.css">
 	<script src="js/js.js"></script>
 </head>
 	<body >
 
+
 		 <div id="nave">
-		 	<img id ="Nave" src="img/Nave.png" alt="img-nave">
-			<img id ="Motor-encencido" src="img/Nave2.gif" alt="img-motor">
+		 	<img id ="imgNave" src="img/Nave.png" alt="img-nave">
+			<img id ="imgMotor" src="img/Nave2.gif" alt="img-motor">
 		 </div>
 
 		 <div class="izq">
-		 	<div id="showm">show menu</div>
 			 <div id="cpanel">
 				<div class="controles">Velocidad 
 					<br><span id="velocidad">100</span> m/s</div>
-				<div class="controles">Fuel 
-					<br><span id="fuel">100</span> litros</div>
 				<div class="controles">Altura 
 					<br><span id="altura">70</span> m</div>
+				<div id="fuel"><div id="gastofuel"></div></div>
 			 </div>
 		 </div>
 
-	 	<div class="centro">b</div>
+	 	<div class="centro">
+	 			<div id="ajustes">
+						<a href="#"><img id="cerrar" src="img/x.png" alt="cerrar"></a>
+						<h2>Ajustes del juego</h2>
+						<br>
+						<p>Cambiar nave</p>
+						<button id="CambiarNave">Ovni</button>
+						<br>
+						<p>Cambiar dificultat</p>
+						<INPUT type="radio" name="dificultat" checked value="1">Facil<br />
+						<INPUT type="radio" name="dificultat" value="2">Normal<br />
+						<INPUT type="radio" name="dificultat" value="3">Difícil<br />
+						<INPUT type="radio" name="dificultat" value="4">Imposible<br>
+				</div>
+
+				<div id="Ayuda">
+					<a href="#"><img id="cerrar" src="img/x.png" alt="cerrar"></a>
+					<br>
+					<br>
+					<h2> Ayuda de juego</h2>
+					<p>	El objetivo de este juego es <b>aterrizar</b> la nave en la luna sin ocasionar daños en la nave, para ello deberemos usar el interruptor de fuel, gastando así gasolina.<br><br>
+					Si no es capas de controlar la caída de la nave para que sea inferior a <b>5 m/s</b>, perderá. <br><br>
+					Todo esto lo tiene que hacer controlando el <b>consumo de la gasolina</b>, quedependiendo del nivel que ponga sera mayo o menos.</p>
+
+				</div>
+
+				<div id="loser">
+					<h3>Has perdido, lo sentimos</h3>
+					<br>
+					<p>Nos has sabido controlar la velocidad de caída de la nave <br> y eso ha provocado un desastre...</p>
+					<button id="VolverAintentar">Volver a jugar.</button>
+					<br>
+					<br>
+					<img id="loser-gif" src="img/loser.gif" alt="Has perdido">
+				</div>
+				<div id="winner">
+					<h3>**Has ganado**</h3>
+					<br>
+					<p>Has conseguido aterizar la nave sin sufrir daños.</p>
+					<button id="VolverAjugar">Volver a jugar.</button>
+					<br>
+					<br>
+					<img id="winner-gif" src="img/winner.gif" alt="Has ganado">
+				</div>
+
+				<div id="SmartphoneMenu">
+					<a href="#"><img id="cerrar" src="img/x.png" alt="cerrar"></a>
+					<div id="S-Replay">Reiniciar</div>
+					<div id="S-Help">Ayuda</div>
+					<div id="S-Setting">Ajustes</div>
+					<div id="S-Sound">Sonido</div>
+				</div>
+	 	</div>
 
 	 	<div class="der">
-	 		<div id="hidem">hide menu</div>
 				<div id="menu">
-					<dir id="BotonIntruccion">Intrucciones</dir>
-					<div id="BotonPlay">Play</div>
-					<div id="BotonPause">Pausar</div>
-					<div id="BotonReiniciar">Replay</div>
-					<div id="BotonSonido">Sonido</div>
+					<div id="BotonMenu"></div>
+					<div id="BotonAjustes"></div>
+					<div id="BotonAyuda"></div>
+					<div id="BotonPlay"></div>
+					<div id="BotonPause"></div>
+					<div id="BotonReiniciar"></div>
+					<div id="BotonSonido"></div>
+
+				</div>
+
+				<div id="interuptores">
+						<img id="BotonOn" src="img/botonON.png">
+						<img id="BotonOff" src="img/botonOFF.png">
 				</div>
 		</div>
 
-	 	<div class="MoonZone">
+	 	<div id="MoonZone">
 	 		<img src="img/Luna.png" alt="luna" id="luna">
-	 		<img src="img/Base.png" alt="Base lunar" id="BaseLunar">
 	 	</div>
+
+
+
 
 	</body>
 </html>

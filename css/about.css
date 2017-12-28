@@ -1,0 +1,45 @@
+body,html{
+	padding:0px;
+	margin:0px;
+	height: 100%;
+	font-family: Comic Sans MS;
+}
+body {
+	background-image: url("../img/Fondo.png");
+}
+p,h3{
+	text-align: left;
+}
+
+#centro{
+	display: block; /*inline-block*/
+	position: absolute;
+    height: 50%;
+    width: 70%;
+    left: 15%;
+	z-index: 5;
+	top: 100px;
+	border-radius: 20px;
+	background-image: url("../img/Fondo-ajustes.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border-color: black;
+	border:5px;
+	border-style: solid;
+	border-color: #85929e;
+	text-align: center;
+}
+
+#cerrar{
+	top: 2px;
+	left: 2px;
+	width: 15%;
+	max-width: 50px;
+	position: absolute;
+}
+#texto{
+	margin: 80px;
+	width: 80%;
+	height: auto;
+	background-color: red;
+}
